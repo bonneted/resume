@@ -19,7 +19,6 @@ $fs-h2: 1.5em;
 $fs-h3: 1.2em;
 $fs-base: 1em;
 $fs-small: 0.8em;
-$fs-note: 0.85em;
 
 // Spacing
 $spacer: 1em;
@@ -121,6 +120,10 @@ header {
       border-radius: 50%;
       width: 120px;
       height: 120px;
+      margin-top: -20px;
+      margin-right: $small-spacer;
+      margin-left: $small-spacer;
+
     }
   }
 }
@@ -211,7 +214,7 @@ section {
     }
 
     .publication {
-      font-size: $fs-note;
+      font-size: $fs-small;
       margin-top: 0.1em;
       a {
         text-decoration: none;
@@ -319,7 +322,7 @@ section {
     }
   }
   .note {
-    font-size: $fs-note;
+    font-size: $fs-small;
     color: lighten($color-text, 20%);
     margin-left: $small-spacer;
   }
@@ -353,9 +356,13 @@ section {
     font-size: $fs-small;
     width: 100%;
     background-color: $color-bg;
+    margin: 0;
+    padding: 0;
   }
   .container {
-    width: calc(100% - ($container-padding+$container-margin)*2);
+    width: calc(100% - 1.4 * $container-padding);
+    margin: 0;
+    padding: $container-padding * 0.7;
   }
   header {
     // flex-direction: column;
@@ -366,6 +373,7 @@ section {
       img {
         width: 80px;
         height: 80px;
+        margin-top: -40px;
       }
     }
   }
@@ -388,12 +396,13 @@ section {
       width: 100%;
       padding: 0;
       margin: 0;
-      margin-top: -1.5cm;
+      margin-top: -1cm;
       box-shadow: none;
       background: transparent;
       background-color: $color-white;
     }
     body{
+      font-size: $fs-base;
       width: 21cm;
       margin: 0;
       padding: 0;
@@ -402,5 +411,12 @@ section {
     .education {
         break-before: page;
     }
+    header .profile img {
+      width: 110px;
+      height: 110px;
+      margin-top: -15px;
+    
+      }
+    }
 
-  }
+  
