@@ -277,12 +277,26 @@ section h2 {
 }
 
 @media (max-width: 920px) {
+  body {
+    font-size: 0.8em;
+    width: 100%;
+    padding: 1em;
+    background-color: #f4f4f4;
+  }
   .container {
-    width: 90%;
+    width: calc(100% - 8em);
+    margin: 0;
   }
   header .profile {
     margin-top: 1em;
     align-self: center;
+  }
+  header .profile img {
+    width: 80px;
+    height: 80px;
+  }
+  .education ul.timeline li .timeline-content img {
+    display: none;
   }
 }
 /* Hide elements not needed in print */
@@ -312,5 +326,8 @@ section h2 {
   .education {
     -moz-column-break-before: page;
          break-before: page;
+  }
+  .website-link {
+    visibility: visible !important;
   }
 }/*# sourceMappingURL=resume.css.map */

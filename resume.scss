@@ -123,12 +123,6 @@ header {
       height: 120px;
     }
   }
-
-//   .website-link {
-//     visibility: hidden;
-//     height: 0 !important;
-//     width: 0 !important;
-//  }
 }
 
 // SECTION BASE & Titles
@@ -355,8 +349,13 @@ section {
 
 // Responsive styling
 @media (max-width: 920px) {
+  body {
+    font-size: $fs-small;
+    width: 100%;
+    background-color: $color-bg;
+  }
   .container {
-    width: 90%;
+    width: calc(100% - ($container-padding+$container-margin)*2);
   }
   header {
     // flex-direction: column;
@@ -364,7 +363,14 @@ section {
     .profile {
       margin-top: $spacer;
       align-self: center;
+      img {
+        width: 80px;
+        height: 80px;
+      }
     }
+  }
+  .education ul.timeline li .timeline-content img {
+    display: none;
   }
 }
 
@@ -397,10 +403,4 @@ section {
         break-before: page;
     }
 
-    // .website-link {
-    //   visibility: visible !important; 
-    //   height: 10em !important;
-    // //   width: 10em !important;
-    // //   margin-top: 1em !important;
-    // }
   }
