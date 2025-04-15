@@ -1,0 +1,406 @@
+// VARIABLES
+// Colors
+$color-text: #333;
+$color-white: #fff;
+$color-bg: #f4f4f4;
+$color-shadow: rgba(0, 0, 0, 0.1);
+$color-link: #0056b3;
+$color-link-hover: #003d80;
+$color-timeline-line: #ccc;
+$color-timeline-content-bg: #f9f9f9;
+$color_section_border: #ccc;
+$color_profile_border: #222;
+$color_hover: #0073b1; 
+$color-icon: #555;
+
+// Font Sizes (only 4-5 levels)
+$fs-h1: 1.8em;
+$fs-h2: 1.5em;
+$fs-h3: 1.2em;
+$fs-base: 1em;
+$fs-small: 0.8em;
+$fs-note: 0.85em;
+
+// Spacing
+$spacer: 1em;
+$small-spacer: 0.5em;
+$container-padding: 3em;
+$container-margin: 30px auto;
+$header-pad-bottom: 10px;
+$header-margin-bottom: 20px;
+$section-margin-bottom: 20px;
+
+// Global Styles
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $color-bg;
+  margin: 0;
+  padding: 0;
+  color: $color-text;
+}
+
+.container {
+  width: 21cm;
+  margin: $container-margin;
+  background: $color-white;
+  box-shadow: 0 0 10px $color-shadow;
+  padding: $container-padding;
+}
+
+// HEADER
+
+// Language Switch Button Styles
+.lang-switch {
+    text-align: right;
+    font-size: $fs-small;
+    margin-bottom: 2em;
+    margin-top: -2em;
+    margin-right: -2em;
+    // No background or extra padding is needed unless you wish to adjust spacing
+  
+    // The active language (non-clickable) is underlined.
+    .active-lang {
+      text-decoration: underline;
+      color: $color-text;
+      cursor: default;
+    }
+    
+    // The other language is rendered as a link without an underline,
+    // but underlines on hover for clarity.
+    a.other-lang {
+      text-decoration: none;
+      color: $color-link;
+      &:hover {
+        text-decoration: underline;
+        color: $color-link-hover;
+      }
+    }
+  }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $color-text;
+  padding-bottom: $header-pad-bottom;
+  margin-bottom: $header-margin-bottom;
+
+  .general-info {
+    // padding-top: 3em;
+    h1 {
+      margin: 0;
+      font-size: $fs-h1;
+    }
+    p {
+      font-size: $fs-base;
+      margin: $small-spacer 0 0 0;
+    }
+    .contact {
+      margin-top: $small-spacer;
+      a {
+        text-decoration: none;
+        color: $color-text;
+        margin: 0 $small-spacer;
+        font-size: $fs-small;
+        transition: color 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        i {
+          font-size: 1.2em;
+          margin-right: $small-spacer;
+        }
+        &:hover {
+          color: $color_hover;
+        }
+      }
+    }
+  }
+
+  .profile {
+    margin-right: $small-spacer;
+    img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+//   .website-link {
+//     visibility: hidden;
+//     height: 0 !important;
+//     width: 0 !important;
+//  }
+}
+
+// SECTION BASE & Titles
+section {
+  margin-bottom: $section-margin-bottom;
+
+  h2 {
+    color: $color-text;
+    border-bottom: 1px solid $color_section_border;
+    padding-bottom: $small-spacer;
+    margin-bottom: 1.5 * $small-spacer;
+    font-size: $fs-h2;
+  }
+}
+
+// SUMMARY
+.summary {
+  line-height: 1.5;
+  margin-bottom: $section-margin-bottom;
+  text-align: justify;
+}
+
+// EXPERIENCE
+.experience {
+  margin-bottom: $section-margin-bottom;
+
+  .job-entry {
+    margin-bottom: 1.5 * $spacer;
+    position: relative;
+
+    h3, h4 {
+      margin: 0 0 $small-spacer 0;
+      font-size: $fs-h3;
+      color: $color-text;
+      span {
+        font-size: $fs-small;
+        color: lighten($color-text, 20%);
+        margin-left: $small-spacer;
+        font-weight: normal;
+      }
+    }
+    // Specific for PhD entry titles if needed
+    &.phd-entry {
+      h3 { font-size: 1.2em; }
+    }
+
+    .job-content {
+      margin-left: 1.5 * $spacer;
+      padding-left: $small-spacer;
+      border-left: 2px solid $color-section_border;
+
+      p {
+        margin: 0.2em 0 0.5em;
+        line-height: 1.45;
+        font-size: $fs-base;
+      }
+      ul {
+        margin: 0.3em 0 0.8em;
+        padding-left: 1.2em;
+        font-size: $fs-base;
+        li {
+          margin-bottom: 0.3em;
+          line-height: 1.4;
+        }
+      }
+
+      h4 {
+        font-size: $fs-base;
+        font-weight: bold;
+        color: darken($color-text, 10%);
+        margin: 0.8em 0 0.3em;
+      }
+
+      // For specialized subsections (e.g., in PhD entry)
+      ul.subsections {
+        list-style: none;
+        padding-left: 0.2em;
+        margin-top: 0.2em;
+        li {
+          margin-bottom: 0.6em;
+          p {
+            margin: 0 0 0.2em;
+          }
+        }
+      }
+    }
+
+    .publication {
+      font-size: $fs-note;
+      margin-top: 0.1em;
+      a {
+        text-decoration: none;
+        color: $color-link;
+        display: inline-flex;
+        align-items: center;
+        &:hover {
+          text-decoration: underline;
+          color: $color-link-hover;
+        }
+        i {
+          margin-right: $small-spacer;
+          color: $color-icon;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}
+
+// EDUCATION (Timeline)
+.education {
+  ul.timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: calc(0.4em - 1px);
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: $color_timeline_line;
+    }
+
+    li {
+      margin-bottom: 0.5em;
+      position: relative;
+      padding-left: 1.5em;
+      .timeline-icon {
+        position: absolute;
+        left: 0;
+        top: 0.75em;
+        width: 0.8em;
+        height: 0.8em;
+        background: $color_timeline_line;
+        border-radius: 50%;
+      }
+      .timeline-content {
+        background: $color-timeline-content-bg;
+        padding: $small-spacer;
+        border-radius: 5px;
+        h3 {
+          margin-top: 0;
+          font-size: $fs-base;
+        }
+        span {
+          font-size: $fs-small;
+          color: lighten($color-text, 40%);
+        }
+        p {
+          margin: 0.5em 0;
+          font-size: $fs-small;
+        }
+        img {
+          width: 6em;
+          max-height: 2.5em;
+          object-fit: contain;
+          display: flex;
+          position: absolute;
+          right: 1em;
+          top: 1em;
+        }
+      }
+    }
+  }
+}
+
+// TECH STACK
+.tech-stack {
+  .tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $small-spacer;
+    .tech-category {
+      flex: 1;
+      min-width: 200px;
+      background: $color-timeline-content-bg;
+      padding: $small-spacer;
+      border-radius: 5px;
+      h3 {
+        margin-top: 0;
+        font-size: $fs-base;
+        border-bottom: 1px solid lighten($color-text, 70%);
+        padding-bottom: $small-spacer;
+        margin-bottom: $small-spacer;
+      }
+      p {
+        margin: 0;
+        font-size: $fs-small;
+        line-height: 1.5;
+      }
+    }
+  }
+  .note {
+    font-size: $fs-note;
+    color: lighten($color-text, 20%);
+    margin-left: $small-spacer;
+  }
+}
+
+// INTERESTS & SIDE PROJECTS
+.interests {
+  p {
+    margin: 0 0 $small-spacer;
+    strong {
+      display: inline-block;
+      margin-bottom: $small-spacer;
+    }
+  }
+  .side-projects {
+    ul {
+      font-size: $fs-small;
+      list-style-type: disc;
+      margin: 0;
+      margin-left: 1.5 * $spacer;
+      li {
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
+
+// Responsive styling
+@media (max-width: 920px) {
+  .container {
+    width: 90%;
+  }
+  header {
+    // flex-direction: column;
+    // align-items: flex-start;
+    .profile {
+      margin-top: $spacer;
+      align-self: center;
+    }
+  }
+}
+
+/* Hide elements not needed in print */
+@media print {
+    a[href]:after {
+      content: "";
+    }
+    header {
+    //   flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    /* Optionally adjust the container's width and padding if needed for print */
+    .container {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      margin-top: -1cm;
+      box-shadow: none;
+      background: transparent;
+      background-color: $color-white;
+    }
+    body{
+      width: 21cm;
+      margin: 0;
+      padding: 0;
+      background: $color-white;
+    }
+    .education {
+        break-before: page;
+    }
+
+    // .website-link {
+    //   visibility: visible !important; 
+    //   height: 10em !important;
+    // //   width: 10em !important;
+    // //   margin-top: 1em !important;
+    // }
+  }

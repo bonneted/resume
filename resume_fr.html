@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Damien BE – CV</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="resume.css">
+  <!-- You can include print or language-specific styles here if needed -->
+</head>
+<body>
+  <!-- Language Switch Button (top right) -->
+  <div class="container">
+    <div class="lang-switch">
+        <a class="other-lang" href="resume.html" title="English">EN</a>
+        <span> | </span>
+        <span class="active-lang">FR</span>
+    </div>
+    <!-- En-tête avec infos générales et profil -->
+    <header>
+      <div class="general-info">
+        <h1>Damien Bonnet-Eymard</h1>
+        <p>Doctorant en Scientific Machine Learning @ KU Leuven | Boursier MSCA</p>
+        <div class="contact">
+            <a href="https://www.linkedin.com/in/damien-bonnet-eymard/" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+              /in/damien-bonnet-eymard
+            </a>
+            <a href="https://github.com/bonneted" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+              /bonneted
+            </a>
+            <a href="mailto:bonneteymard.damien@gmail.com" title="Email">
+              <i class="fas fa-envelope"></i>
+              bonneteymard.damien@gmail.com
+            </a>
+            <!-- <a class="website-link" href="mailto:bonneteymard.damien@gmail.com" title="Email">
+                <i class="fas fa-globe"></i>
+                bonneted.github.io/resume
+            </a> -->
+        </div>
+      </div>
+
+      <div class="profile">
+        <img src="icon/profile.jpeg" alt="Photo de profil de Damien">
+      </div>
+    </header>
+
+    <!-- Section Résumé -->
+    <section class="summary">
+      <p>
+        Je suis un doctorant doté d’une solide formation en machine learning et en physique, développant des "Physics-Informed Neural Networks" pour résoudre des problèmes complexes en physique. 
+        Fort d’une maîtrise avancée de Python et d’une expérience en tant que contributeur open-source, je recherche à rejoindre une équipe innovante où je pourrai mettre à profit mes compétences en scientific machine learning.
+      </p>
+    </section>
+
+    <!-- Section Expérience -->
+    <section class="experience">
+        <h2>Expérience</h2>
+  
+        <div class="job-entry phd-entry">
+          <h3>Doctorat en SciML @ KU Leuven<span>(2021 - Présent)</span></h3>
+          <div class="job-content">
+              <p>Boursier Marie Skłodowska-Curie Actions (MSCA), au sein du projet GREYDIENT, développant des modèles grey-box alliant approches data-driven et basées sur la physique. Ma recherche se concentre sur des Physics-Informed Neural Networks (PINNs) robustes pour la mécanique des solides, incluant :</p>
+              <ul class="subsections">
+                  <li>
+                      <p><strong>Propagation d'incertitudes :</strong> Propagation des incertitudes microscopiques vers la réponse mécanique des matériaux composites.</p>
+                      <p class="publication">
+                          <a href="https://doi.org/10.5281/zenodo.13907104" target="_blank" title="Bonnet Eymard, Damien, et al. 'Physics-Informed Neural Networks to Propagate Random Field Properties of Composite Materials.' ISMA/USD 2024.">
+                              <i class="fas fa-file-alt"></i> Bonnet Eymard et al. ISMA/USD, 2024.
+                          </a>
+                      </p>
+                  </li>
+                  <li>
+                      <p><strong>Identification des matériaux :</strong> Récupération des propriétés matérielles à partir de mesures plein champ.</p>
+                       <p class="publication">
+                          <a href="https://doi.org/10.5281/zenodo.14039660" target="_blank" title="Bonnet Eymard, Damien, et al. 'Separable Physics-Informed Neural Networks for Robust Inverse Quantification in Solid Mechanics.' ISRERM, 2024.">
+                             <i class="fas fa-file-alt"></i> Bonnet Eymard et al. ISRERM, 2024.
+                          </a>
+                      </p>
+                  </li>
+              </ul>
+          </div>
+        </div>
+  
+        <div class="job-entry">
+          <h4>Stage en analyse de données @ EDF (PRISME R&D) <span>(2020)</span></h4>
+          <div class="job-content">
+              <p>Développement d’outils au sein du département R&D de modélisation et de surveillance :</p>
+              <ul>
+                  <li>Nouveau composant pour la bibliothèque ThermoSysPro (Modelica) modélisant l’hétérogénéité du cœur de réacteur nucléaire.</li>
+                  <li>Modèle de régression régularisée (pandas, Scikit-learn) prédisant les points de fonctionnement d’une centrale électrique.</li>
+              </ul>
+          </div>
+        </div>
+  
+        <div class="job-entry">
+          <h4>Stage en traitement de données @ Diocles <span>(2019 - 2020)</span></h4>
+          <div class="job-content">
+               <p>Travail au sein d’une équipe internationale sur le traitement des données provenant de scanners corporels :</p>
+              <ul>
+                  <li>Traitement de données 3D (maillage, nuage de points) à l’aide de MATLAB pour l’extraction d’indicateurs.</li>
+                  <li>Implémentation d’un algorithme de heat kernel signature pour l’analyse de formes.</li>
+                  <li>Conception et mise en place d’un pipeline de correction des erreurs d’acquisition de mesures.</li>
+              </ul>
+          </div>
+        </div>
+      </section>
+
+    <!-- Section Formation -->
+    <section class="education">
+        <h2>Formation</h2>
+        <ul class="timeline">
+          <li>
+            <div class="timeline-icon"></div>
+            <div class="timeline-content">
+                <img src="icon/kuleuven.png" alt="KU Leuven">
+               <h3>KU Leuven<span> (2021 - )</span></h3>
+               <p><strong>Doctorant</strong> sous la direction de Prof. <a href="https://www.kuleuven.be/wieiswie/en/person/00012025" target="_blank" title="David Moens">David Moens</a> et Prof. <a href="https://lre.mb.tu-dortmund.de/institute/staff/matthias-faes/" target="_blank" title="Matthias G. R. Faes">Matthias G. R. Faes</a></p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-icon"></div>
+            <div class="timeline-content">
+                <img src="icon/ecl.png" alt="École Centrale de Lyon">
+               <h3>École Centrale de Lyon <span>(2017 - 2021)</span></h3>
+               <p><strong>Diplôme (Master) :</strong> Ingénieur général - option Informatique</p>
+               <p>
+                 <strong>Cours principaux :</strong> Fluid/Continuum Mechanics, Statistiques, Traitement du signal, Automatique, AI and Machine Learning
+               </p>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-icon"></div>
+            <div class="timeline-content">
+                <img src="icon/BJ.png" alt="Ginette">
+               <h3>Classe Préparatoire Sainte-Geneviève <span>(2015 - 2017)</span></h3>
+               <p>
+                <strong>Cours principaux :</strong> Maths, Physique, Chimie
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+    <!-- Section Compétences techniques -->
+    <section class="tech-stack">
+        <h2>Compétences techniques</h2>
+        <div class="tech-container">
+          <div class="tech-category">
+            <h3>Machine Learning</h3>
+            <p>PyTorch; JAX; Cuda; DeepXDE*</p>
+          </div>
+          <div class="tech-category">
+            <h3>Data Science</h3>
+            <p>Scikit-learn; Pandas; R; MATLAB</p>
+          </div>
+          <div class="tech-category">
+            <h3>Physics</h3>
+            <p>FEniCS; Modelica; Abaqus</p>
+          </div>
+        </div>
+        <span class="note">*active contributor</span>
+      </section>
+
+    <!-- Section Centres d'intérêt & Projets parallèles -->
+    <section class="interests">
+      <h2>Centres d'intérêt &amp; Projets parallèles</h2>
+      <p>
+        <strong>Sports :</strong> Tennis, course à pied et cyclisme.
+      </p>
+      <p>
+        <strong>Programmation :</strong> Contributeur open-source. Plusieurs projets personnels, dont :
+      </p>
+      <div class="side-projects">
+        <ul>
+          <li>
+            <strong>Routing Algorithm :</strong> Un algorithme de routage prenant en compte la sécurité.
+            <a href="https://github.com/bonneted/safe_map" target="_blank" title="Voir Routing Algorithm sur GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <strong>Image Mosaic :</strong> Création d’une mosaïque d’images à partir d’une collection d’images, développé en Matlab.
+            <a href="https://github.com/bonneted/image_mosaic/" target="_blank" title="Voir Image Mosaic sur GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <strong>Particle Swarm Optimization :</strong> Visualisation de l’algorithme PSO, développé en Matlab.
+            <a href="https://github.com/bonneted/heuristique" target="_blank" title="Voir Particle Swarm Optimization sur GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
